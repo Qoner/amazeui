@@ -144,12 +144,12 @@ Datepicker.prototype.set = function() {
 
   if (!this.isInput) {
     if (this.component) {
-      $input = this.$element.find('input').attr('value', formatted);
+      $input = this.$element.find('input').prop('value', formatted);
     }
 
     this.$element.data('date', formatted);
   } else {
-    $input = this.$element.attr('value', formatted);
+    $input = this.$element.prop('value', formatted);
   }
 
   // fixes https://github.com/amazeui/amazeui/issues/711
